@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1118">
+  <meta name="description" content="Rubik Lab — giáo trình Rubik 3×3 từ beginner đến full CFOP, có cube 3D, finger trick, chia nhịp và 119 case.">
+  <title>RUBIK LAB — CFOP, Finger Tricks & 3D Cube</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#home"><span class="brand-cube"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span><span>RUBIK<span class="brand-accent">LAB</span><small>3×3 · LEARN / RECOGNIZE / SOLVE</small></span></a>
+    <button class="mobile-menu" id="mobileMenu" aria-label="Mở menu">☰</button>
+    <nav id="mainNav"><a href="#roadmap">Lộ trình</a><a href="#learn">Hướng dẫn</a><a href="#cfop">CFOP</a><a href="#fingertricks">Finger trick</a><a href="#algorithms">Công thức</a><a href="#practice">Luyện tập</a></nav>
+    <a class="nav-cta" href="#algorithms">Mở thư viện <span>↗</span></a>
+  </header>
+
+  <main id="home">
+    <section class="hero wrap">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="pulse"></span> THE COMPLETE 3×3 SPEEDCUBING GUIDE</div>
+        <h1>Hiểu từng mảnh.<br><em>Đọc đúng case.</em><br>Giải nhanh hơn.</h1>
+        <p class="hero-text">Từ beginner đến full CFOP. Có hướng cầm, cube 3D, chia nhịp công thức và mẹo finger-trick để m không phải nhìn một dãy move rồi tự bơi.</p>
+        <div class="hero-buttons"><a class="btn btn-main" href="#roadmap">Bắt đầu học <b>→</b></a><a class="btn btn-soft" href="#algorithms">Tra cứu công thức</a></div>
+        <div class="hero-metrics"><div><strong>41</strong><span>F2L CASES</span></div><div><strong>57</strong><span>OLL CASES</span></div><div><strong>21</strong><span>PLL CASES</span></div><div><strong>119</strong><span>TOTAL CASES</span></div></div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-glow"></div><div class="hero-ring ring-a"></div><div class="hero-ring ring-b"></div>
+        <div class="hero-cube" aria-label="Khối Rubik minh họa"><div class="cube-side front"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="cube-side right"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="cube-side top"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
+        <div class="orbit-label label-one"><b>01</b> RECOGNIZE</div><div class="orbit-label label-two"><b>02</b> EXECUTE</div><div class="hero-caption">CROSS <span>→</span> F2L <span>→</span> OLL <span>→</span> PLL</div>
+      </div>
+    </section>
+
+    <section class="wrap warning-strip"><span class="warning-icon">✦</span><p><b>Quy ước màu cố định của toàn bộ sơ đồ:</b> vàng U · trắng D · xanh lá F · đỏ R · xanh dương B · cam L. F2L luôn giữ cross ở đáy và slot mục tiêu ở trước-phải; OLL/PLL giữ vàng ở trên.</p></section>
+
+    <section class="wrap section" id="roadmap">
+      <div class="section-head"><div><div class="eyebrow">YOUR LEARNING PATH</div><h2>Lộ trình từ Beginner đến Full CFOP</h2></div><p>Đừng ôm 119 công thức ngay ngày đầu. Chốt nền tảng, học 2-look trước, rồi mới mở full CFOP — đi từng nấc cho chắc.</p></div>
+      <div class="roadmap-grid">
+        <article class="road-card"><span class="road-no">01 / FOUNDATION</span><div class="road-icon">🧩</div><h3>Beginner Method</h3><p>Giải theo từng tầng, hiểu cạnh, góc, tâm và cách đặt đúng vị trí.</p><a href="#learn">Học 7 bước <b>↗</b></a></article>
+        <article class="road-card"><span class="road-no">02 / PAIR BUILDING</span><div class="road-icon">🔗</div><h3>Cross + F2L</h3><p>Tạo cross ở đáy rồi ghép 4 cặp góc–cạnh để hoàn tất hai tầng đầu.</p><a href="#cfop">Học F2L <b>↗</b></a></article>
+        <article class="road-card"><span class="road-no">03 / ORIENTATION</span><div class="road-icon">🟡</div><h3>Full OLL</h3><p>57 case, chia thành 14 nhóm hình dạng. Có thể bắt đầu bằng 2-look OLL.</p><a href="#algorithms" data-filter-link="oll">Tra OLL <b>↗</b></a></article>
+        <article class="road-card"><span class="road-no">04 / PERMUTATION</span><div class="road-icon">🎯</div><h3>Full PLL</h3><p>21 case để đưa toàn bộ mảnh tầng cuối về đúng vị trí.</p><a href="#algorithms" data-filter-link="pll">Tra PLL <b>↗</b></a></article>
+      </div>
+      <div class="progress-overview"><div><span>TIẾN ĐỘ THUỘC CÔNG THỨC</span><b id="overallProgress">0 / 119 đã đánh dấu thuộc</b></div><div class="progress-track"><span id="overallBar"></span></div></div>
+    </section>
+
+    <section class="wrap section" id="learn">
+      <div class="section-head"><div><div class="eyebrow">START WITH THE BASICS</div><h2>Hướng dẫn giải cơ bản</h2></div><p>7 bước layer-by-layer để giải được cube trước khi chuyển sang CFOP. Chọn từng bước để xem mục tiêu và công thức.</p></div>
+      <div class="learn-layout"><aside class="learn-steps" id="beginnerTabs"></aside><article class="learn-detail" id="beginnerDetail" aria-live="polite"></article></div>
+      <div class="notation-panel">
+        <div class="notation-intro"><div class="eyebrow">MOVE NOTATION</div><h3>Đọc ký hiệu chuẩn trước khi xoay</h3><p>Chiều xoay được xác định khi nhìn trực diện vào mặt đang xoay. Dấu nháy không có nghĩa là xoay ngược từ góc nhìn cố định của mày.</p></div>
+        <div class="notation-grid">
+          <div><b>U</b><span>Up · mặt trên</span></div><div><b>D</b><span>Down · mặt dưới</span></div><div><b>R</b><span>Right · mặt phải</span></div><div><b>L</b><span>Left · mặt trái</span></div><div><b>F</b><span>Front · mặt trước</span></div><div><b>B</b><span>Back · mặt sau</span></div>
+          <div><b>U'</b><span>Ngược chiều kim đồng hồ</span></div><div><b>U2</b><span>Xoay 180°</span></div><div><b>r / Rw</b><span>Wide turn · hai lớp phải</span></div><div><b>M</b><span>Lớp giữa, chiều như L</span></div><div><b>x / y / z</b><span>Xoay cả khối như R / U / F</span></div><div><b>2'</b><span>Tương đương 2 (180°)</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="wrap section" id="cfop">
+      <div class="section-head"><div><div class="eyebrow">THE SPEEDSOLVING METHOD</div><h2>CFOP hoạt động như thế nào?</h2></div><p>CFOP là bốn giai đoạn giải: Cross, First Two Layers, Orientation of Last Layer và Permutation of Last Layer.</p></div>
+      <div class="cfop-flow"><article><span>01</span><b>CROSS</b><p>Tạo dấu cộng trắng ở đáy, khớp màu phụ với tâm.</p></article><i>→</i><article><span>02</span><b>F2L</b><p>Ghép 4 cặp góc–cạnh rồi chèn vào 4 slot.</p></article><i>→</i><article><span>03</span><b>OLL</b><p>Định hướng mọi sticker tầng trên thành màu vàng.</p></article><i>→</i><article><span>04</span><b>PLL</b><p>Hoán vị các mảnh tầng cuối để giải xong cube.</p></article></div>
+      <div class="concept-grid">
+        <article class="concept-card"><span class="concept-tag">CROSS</span><h3>Giải cross ở đáy</h3><p>Mục tiêu là đặt 4 cạnh trắng sao cho cả màu trắng và màu bên đều khớp tâm. Luyện inspection để lập kế hoạch trước khi xoay; cố gắng giảm số move thay vì chỉ làm cho xong.</p><div class="concept-tip"><b>Gợi ý:</b> tập giải cross ở đáy ngay từ đầu, tránh giải trên mặt U rồi mới lật cube.</div></article>
+        <article class="concept-card"><span class="concept-tag">F2L · 41 CASES</span><h3>Ghép góc + cạnh thành cặp</h3><p>Mỗi slot cần một góc tầng 1 và một cạnh tầng 2. Tìm hai mảnh có chung hai màu, ghép chúng ở tầng U rồi chèn cùng lúc. Có ba kiểu cơ bản: tách cặp, cặp đã ghép và mảnh đang mắc trong slot.</p><div class="concept-tip"><b>Trigger nền:</b> <code>R U R'</code> mở slot phải · <code>L' U' L</code> mở slot trái.</div></article>
+        <article class="concept-card"><span class="concept-tag">OLL · 57 CASES</span><h3>Định hướng tầng cuối</h3><p>F2L phải hoàn chỉnh trước. OLL làm cho toàn bộ mặt U có một màu; vị trí các mảnh chưa cần đúng. 57 case được gom theo pattern cạnh và góc để dễ nhận diện.</p><div class="concept-tip"><b>Đi theo từng nấc:</b> học 10 thuật toán 2-look OLL trước, rồi mở rộng lên full OLL.</div></article>
+        <article class="concept-card"><span class="concept-tag">PLL · 21 CASES</span><h3>Hoán vị tầng cuối</h3><p>Sau OLL, mặt U đã vàng hoàn chỉnh. PLL đổi vị trí cạnh và góc của tầng cuối nhưng không lật hay xoay sai hướng chúng. Nhận diện bằng headlights, block và bar ở các mặt bên.</p><div class="concept-tip"><b>Đi theo từng nấc:</b> 2-look PLL dùng 6 công thức: T, Y, Ua, Ub, H và Z.</div></article>
+      </div>
+      <div class="two-look-banner"><div><div class="eyebrow">THE BRIDGE TO FULL CFOP</div><h3>Chưa cần học hết 78 công thức tầng cuối.</h3><p>2-look OLL (10) + 2-look PLL (6) giúp mày giải tầng cuối bằng hai lần nhận diện. Sau đó học dần các case còn lại.</p></div><button class="btn btn-main" id="showTwoLook">Mở bộ 2-look <b>→</b></button></div>
+    </section>
+
+    <section class="wrap section" id="fingertricks">
+      <div class="section-head"><div><div class="eyebrow">NO MORE AWKWARD REGRIPS</div><h2>Finger trick: xoay mượt, không gồng tay</h2></div><p>Đừng cố xoay thật nhanh ngay. Mục tiêu đầu tiên là giữ cube ổn định, chuyển move liền mạch và không phải nhấc cả bàn tay sau mỗi lần xoay.</p></div>
+      <div class="finger-layout">
+        <article class="finger-card finger-main-card"><span class="finger-no">01 / BASE GRIP</span><h3>Set tay trước đã</h3><p>Hai ngón cái giữ mặt trước (F), các ngón còn lại đỡ phía sau và hai bên. Giữ lực vừa đủ để cube không tuột — đừng bóp cứng.</p><div class="finger-callout"><b>Rule of thumb:</b> tay ở yên, ngón tay làm việc. Regrip chỉ khi thật sự cần.</div></article>
+        <article class="finger-card"><span class="finger-no">02 / THE CORE</span><h3>Thuộc 4 move này</h3><div class="finger-mini-alg">R U R' U'</div><p>Đây là Right Trigger. Gặp nó trong beginner method, OLL và nhiều công thức khác. Tập cho liền mạch trước khi tăng tốc.</p></article>
+        <article class="finger-card"><span class="finger-no">03 / TRAIN SMART</span><h3>Chậm mà liền = ngon</h3><p>Tập 10–20 lần một nhịp. Nếu cube bị lệch, tay phải đổi grip liên tục hoặc move bị kẹt, giảm tốc và sửa đường ngón tay.</p><div class="finger-callout"><b>Mini challenge:</b> 10 lần R U R' U' không dừng giữa chuỗi.</div></article>
+      </div>
+      <div class="finger-table-wrap">
+        <div class="finger-table-title"><div><span class="eyebrow">MOVE → FINGER</span><h3>Gợi ý ngón cho người mới</h3></div><p>Đây là điểm bắt đầu phổ biến, không phải luật cứng. Đổi ngón nếu grip hoặc cube của m hợp cách khác hơn.</p></div>
+        <div class="finger-move-grid">
+          <div><code>R</code><b>Áp út tay phải</b><span>Đẩy lớp phải lên.</span></div>
+          <div><code>R'</code><b>Ngón cái / trỏ phải</b><span>Kéo lớp phải xuống theo grip.</span></div>
+          <div><code>U</code><b>Ngón giữa tay phải</b><span>Flick mặt trên; hạn chế xoay cả cổ tay.</span></div>
+          <div><code>U'</code><b>Ngón cái tay trái</b><span>Flick ngược chiều U.</span></div>
+          <div><code>U2</code><b>Flick kép</b><span>Hai nhịp liên tiếp, đừng dừng giữa.</span></div>
+          <div><code>F / F'</code><b>Ngón cái / trỏ</b><span>Đẩy xuống bằng cái, kéo lên bằng trỏ.</span></div>
+        </div>
+      </div>
+      <div class="finger-practice-strip"><b>Drill đề xuất</b><span>R U R' U' × 10 → nghỉ ngắn → lặp lại. Ưu tiên move sạch và không regrip thừa.</span><a href="#algorithms" data-filter-link="2look">Luyện 2-look trước ↗</a></div>
+    </section>
+
+    <section class="wrap section" id="algorithms">
+      <div class="section-head"><div><div class="eyebrow">THE COMPLETE ALGORITHM LIBRARY</div><h2>Thư viện công thức CFOP</h2></div><p>Đủ 119 case. Mở một case để xem cube 3D, chia nhịp, finger-trick gợi ý và mô phỏng từng move. Không cần học vẹt cả cục.</p></div>
+      <div class="library-toolbar"><div class="filter-row" id="filterRow"><button class="filter active" data-filter="all">Tất cả <b>119</b></button><button class="filter" data-filter="f2l">F2L <b>41</b></button><button class="filter" data-filter="oll">OLL <b>57</b></button><button class="filter" data-filter="pll">PLL <b>21</b></button><button class="filter" data-filter="2look">2-look <b>16</b></button></div><div class="search-row"><label class="search-box"><span>⌕</span><input id="algorithmSearch" type="search" placeholder="Tìm F2L 12, OLL 21, Ua..." autocomplete="off"></label><div class="view-switch"><button class="active" data-view="grid" aria-label="Xem dạng thẻ">▦</button><button data-view="table" aria-label="Xem dạng bảng">☷</button></div></div></div>
+      <div class="result-meta"><span id="resultCount">Hiển thị 119 / 119 case</span><span>Chạm vào case để mở phòng tập ↗</span></div>
+      <div class="algorithm-grid" id="algorithmGrid"></div>
+      <div class="algorithm-table-wrap" id="algorithmTableWrap" hidden><table class="algorithm-table"><thead><tr><th>Case</th><th>Nhóm</th><th>Nhận diện / hướng cầm</th><th>Công thức</th><th></th></tr></thead><tbody id="algorithmTable"></tbody></table></div>
+      <div class="library-foot"><span>◎ Hình minh họa được mô phỏng từ nghịch đảo của công thức, không dùng ảnh màu minh họa ngẫu nhiên.</span><span>Trạng thái học được lưu trên trình duyệt này.</span></div>
+    </section>
+
+    <section class="wrap section" id="practice">
+      <div class="section-head"><div><div class="eyebrow">TRAIN YOUR RECOGNITION</div><h2>Khu luyện tập</h2></div><p>Luyện nhận diện trước, nhớ công thức sau. Dùng timer để theo dõi tiến bộ và flashcard để tự kiểm tra.</p></div>
+      <div class="practice-grid">
+        <article class="practice-card timer-card"><div class="practice-kicker">SPEED TIMER</div><h3>Đồng hồ luyện solve</h3><div class="timer-display" id="timerDisplay">00:00.00</div><div class="timer-controls"><button class="btn btn-main" id="timerStart">Bắt đầu</button><button class="btn btn-soft" id="timerReset">Reset</button></div><p class="muted">Space: bắt đầu / dừng · Reset để luyện lượt mới.</p></article>
+        <article class="practice-card flash-card"><div class="practice-kicker">CASE FLASHCARD</div><div class="flash-head"><h3>Nhận diện công thức</h3><select id="flashType"><option value="all">Tất cả CFOP</option><option value="f2l">F2L</option><option value="oll">OLL</option><option value="pll">PLL</option><option value="2look">2-look only</option></select></div><div class="flash-case" id="flashCase">Chọn “Case ngẫu nhiên” để bắt đầu</div><div class="flash-diagram" id="flashDiagram"></div><div class="flash-name" id="flashName">READY?</div><div class="flash-answer" id="flashAnswer" hidden></div><div class="flash-controls"><button class="btn btn-main" id="flashNext">Quăng case mới</button><button class="btn btn-soft" id="flashReveal" disabled>Reveal công thức</button></div></article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap footer"><a class="brand" href="#home"><span class="brand-cube"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span><span>RUBIK<span class="brand-accent">LAB</span><small>BUILT TO UNDERSTAND THE CUBE</small></span></a><div class="footer-right"><span>Rubik 3×3 · Beginner → Full CFOP</span><a href="#home">Lên đầu trang ↑</a></div><div class="source-note">Thư viện 119 case giữ công thức tham chiếu; các biến thể được ghi rõ là bản dễ nhớ hoặc bản ít move. Hình case và trạng thái từng move được dựng bằng mô phỏng sticker của Rubik Lab.</div></footer>
+
+  <div class="modal-backdrop" id="caseModal" hidden>
+    <section class="case-modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" id="closeModal" aria-label="Đóng">×</button>
+      <div class="modal-kicker" id="modalKicker">CASE DETAIL</div><div class="modal-title-row"><div><h2 id="modalTitle">F2L 1</h2><p id="modalSubtitle"></p></div><button class="learn-toggle" id="learnToggle">＋ Đánh dấu đã thuộc</button></div>
+      <div class="modal-body-grid">
+        <div class="diagram-column">
+          <div class="diagram-label">INTERACTIVE 3D CUBE · YELLOW U / WHITE D</div>
+          <div class="cube3d-stage" id="cube3DStage" aria-label="Khối Rubik 3D có thể kéo để xoay">
+            <div class="cube3d-glow"></div><div class="cube3d-holder" id="cube3DHolder"></div>
+            <span class="cube3d-drag-hint">DRAG TO ROTATE · KÉO ĐỂ XOAY</span>
+          </div>
+          <div class="cube3d-toolbar"><button type="button" id="cubeViewReset">↺ Góc nhìn mặc định</button><span>Giữ chuột hoặc chạm rồi kéo để xoay cube</span></div>
+          <div class="cube-face-views" aria-label="Chọn mặt muốn xem">
+            <span>XEM RIÊNG MẶT:</span>
+            <button type="button" data-cube-face="U">U</button><button type="button" data-cube-face="D">D</button>
+            <button type="button" data-cube-face="F">F</button><button type="button" data-cube-face="B">B</button>
+            <button type="button" data-cube-face="L">L</button><button type="button" data-cube-face="R">R</button>
+          </div>
+          <div class="diagram-legend"><span><i class="swatch y"></i> Vàng U</span><span><i class="swatch w"></i> Trắng D</span><span><i class="swatch g"></i> Xanh lá F</span><span><i class="swatch r"></i> Đỏ R</span><span><i class="swatch b"></i> Xanh dương B</span><span><i class="swatch o"></i> Cam L</span></div>
+          <p class="diagram-note" id="diagramNote">Mô hình 3D được dựng trực tiếp từ trạng thái cube của case.</p>
+        </div>
+        <div class="formula-column"><div class="hold-box"><span>HƯỚNG CẦM / NHẬN DIỆN</span><p id="modalHold"></p><p class="recognition" id="modalRecognition"></p></div><div class="formula-box"><div class="formula-heading"><span>ALGORITHM / CÔNG THỨC</span><button class="copy-btn" id="copyFormula">Copy ↗</button></div><div class="formula-variant-row" id="formulaVariantRow" hidden><label for="formulaVariant">Chọn phiên bản</label><select id="formulaVariant"></select></div><code id="modalFormula"></code><div class="formula-breakdown-title"><b>Chia nhịp để tập</b><span>Đây là các block luyện tay, không phải công thức độc lập.</span></div><div class="formula-breakdown" id="formulaBreakdown"></div><div class="formula-meta" id="formulaMeta"></div><p class="variant-note" id="variantNote" hidden></p></div><div class="finger-coach-box"><div><span>FINGER-TRICK GỢI Ý</span><p id="modalFingerTip"></p></div><div><span>NHỊP TẬP / MẸO CASE</span><p id="modalPracticeTip"></p></div></div><div class="step-player"><div class="step-player-head"><span>MOVE-BY-MOVE</span><b id="moveCount">0 / 0</b></div><div class="move-current" id="moveCurrent">Chọn “Move tiếp” để bắt đầu</div><p id="moveMeaning">Mỗi move sẽ cập nhật khối Rubik 3D bên trái.</p><p class="finger-live" id="fingerTipLive">Chọn move tiếp theo để xem ngón gợi ý.</p><div class="move-sequence" id="moveSequence"></div><div class="move-controls"><button id="moveReset">↺ Reset</button><button id="movePrev">← Trước</button><button class="btn btn-main" id="moveNext">Move tiếp →</button></div></div></div>
+      </div>
+      <div class="modal-footer"><span id="modalProgressText">Chưa đánh dấu thuộc</span><button class="btn btn-soft" id="modalNextCase">Case tiếp theo →</button></div>
+    </section>
+  </div>
+
+  <script src="data.js"></script><script src="cube.js"></script><script src="app.js"></script>
+</body>
+</html>
